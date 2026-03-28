@@ -16,7 +16,7 @@ const Home = () => {
       <div className="home-content">
         {/* Header */}
         <div className="home-header">
-          <h1>📝 Mis Tareas</h1>
+          <h1> Mis Tareas</h1>
           <p className="task-count">
             {tasks.length === 0
               ? 'Sin tareas'
@@ -27,7 +27,6 @@ const Home = () => {
         {/* Lista de tareas o mensaje vacío */}
         {tasks.length === 0 ? (
           <div className="empty-state">
-            <div className="empty-icon">✨</div>
             <h2>No hay tareas pendientes.</h2>
             <p>¡Agrega una nueva para comenzar!</p>
             <Link to="/agregar" className="link-button">
