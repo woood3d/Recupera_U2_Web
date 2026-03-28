@@ -12,7 +12,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #f5f5f5;
+  background-color: #F3F4F6;
 }
 
 html,
@@ -39,25 +39,25 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: #E5E7EB;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #888;
+  background: #14B8A6;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: #0d9488;
 }
 
 /* Selección de texto */
 ::selection {
-  background-color: #667eea;
+  background-color: #14B8A6;
   color: white;
 }
 
 ::-moz-selection {
-  background-color: #667eea;
+  background-color: #14B8A6;
   color: white;
 }
