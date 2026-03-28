@@ -1,0 +1,64 @@
+/* TaskCard.css - Estilos para el componente TaskCard */
+
+.task-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  gap: 12px;
+}
+
+.task-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-color: #007bff;
+}
+
+/* Cuando la tarea está completada */
+.task-card.completed {
+  background-color: #f8f9fa;
+  border-color: #c8e6c9;
+}
+
+.task-card.completed .task-text {
+  color: #999;
+  text-decoration: line-through;
+}
+
+/* Content de la tarea */
+.task-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+}
+
+/* Checkbox */
+.task-checkbox {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: #007bff;
+}
+
+/* Texto de la tarea */
+.task-text {
+  font-size: 16px;
+  color: #333;
+  word-break: break-word;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .task-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .task-card .btn {
+    width: 100%;
+  }
+}

@@ -1,0 +1,272 @@
+/* Home.css - Estilos para la página Home */
+
+.home-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.home-content {
+  width: 100%;
+  max-width: 600px;
+  padding-top: 20px;
+}
+
+/* Header */
+.home-header {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.home-header h1 {
+  margin: 0 0 8px 0;
+  font-size: 32px;
+  color: #333;
+  font-weight: 700;
+}
+
+.task-count {
+  margin: 0;
+  font-size: 14px;
+  color: #999;
+  font-weight: 500;
+}
+
+/* Estado vacío */
+.empty-state {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 60px 24px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.empty-icon {
+  font-size: 64px;
+  margin-bottom: 20px;
+}
+
+.empty-state h2 {
+  margin: 0 0 12px 0;
+  font-size: 24px;
+  color: #333;
+  font-weight: 600;
+}
+
+.empty-state p {
+  margin: 0 0 24px 0;
+  color: #999;
+  font-size: 16px;
+}
+
+/* Enlace sin estilos predeterminados */
+.link-button {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.link-button .btn {
+  padding: 12px 28px;
+  font-size: 16px;
+}
+
+/* Lista de tareas */
+.tasks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 80px;
+  animation: slideIn 0.4s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Componente TaskCard dentro de la lista */
+.tasks-list .task-card {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+}
+
+.tasks-list .task-card:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Botón flotante (FAB - Floating Action Button) */
+.fab {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  text-decoration: none;
+}
+
+.fab-button {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  font-size: 32px;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.fab-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 28px rgba(102, 126, 234, 0.6);
+}
+
+.fab-button:active {
+  transform: scale(0.95);
+}
+
+/* Footer */
+.home-footer {
+  display: flex;
+  gap: 12px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  margin-top: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  justify-content: center;
+}
+
+.home-footer a {
+  text-decoration: none;
+}
+
+/* Página 404 */
+.not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.not-found h1 {
+  font-size: 48px;
+  margin: 0 0 16px 0;
+  font-weight: 700;
+}
+
+.not-found p {
+  font-size: 18px;
+  margin: 0 0 32px 0;
+  opacity: 0.9;
+}
+
+.not-found a {
+  display: inline-block;
+  padding: 12px 28px;
+  background-color: white;
+  color: #667eea;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.not-found a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .home-container {
+    padding: 12px;
+  }
+
+  .home-content {
+    padding-top: 12px;
+  }
+
+  .home-header {
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  .home-header h1 {
+    font-size: 26px;
+  }
+
+  .empty-state {
+    padding: 40px 20px;
+  }
+
+  .empty-state h2 {
+    font-size: 20px;
+  }
+
+  .tasks-list {
+    margin-bottom: 70px;
+    gap: 10px;
+  }
+
+  .fab {
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .fab-button {
+    width: 56px;
+    height: 56px;
+    font-size: 28px;
+  }
+
+  .home-footer {
+    flex-direction: column;
+    padding: 16px;
+    margin-top: 20px;
+  }
+
+  .home-footer .btn {
+    width: 100%;
+  }
+
+  .not-found h1 {
+    font-size: 36px;
+  }
+
+  .not-found p {
+    font-size: 16px;
+  }
+}
